@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --primary:#3DCFD3;
+    --secondary:#070606;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+}
+
+body {
+    background-color: var(--ternary);
+}
+
+.inner {
+    padding-top: 20px;
+}
+
+.header {
+    text-align: center;
+    color: var(--secondary);
+    padding: 1rem;
+    position: relative;
+}
+
+.header:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    /* transform: translateX(-50%); */
+    height: 8px;
+    width: 70px;
+    border-radius: 5px 0 0 5px;
+    background-color: var(--dark);
+}
+
+.header:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    height: 8px;
+    width: 70px;
+    border-radius: 0 5px 5px 0;
+    background-color: var(--pure);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2 rem;
+}
+
+.skill-box {
+    padding: 1rem;
+    color: var(--dark);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.skill-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.skill-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 35px;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: var(--light);
+    transition: .5s;
+}
+
+.skill-title:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 35px;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: var(--dark);
+    transition: .5s;
+}
+
+.skill-title h3 {
+    color: var(--dark);
+    margin-top: 0.5rem;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 45px;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100px;
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 45px 0 0 45px;
+}
+
+.skill-icon {
+    width: 50px;
+}
+
+
+@media screen and (max-width: 990px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container{
+        grid-template-columns: 1fr
+    }
+}
